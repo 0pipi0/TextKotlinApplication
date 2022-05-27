@@ -3,10 +3,10 @@ package com.martian.architecture
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.snackbar.Snackbar
 import com.martian.architecture.databinding.ActivityMainBinding
+import com.martian.architecture.databinding.DataBindingActivity
 import com.martian.architecture.viewmodel.ViewModelActivity
 
 class MainActivity : AppCompatActivity() {
@@ -37,7 +37,8 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun dataBinding(view: View) {
-        Toast.makeText(this,"data binding",Toast.LENGTH_SHORT).show()
+//        Toast.makeText(this,"data binding",Toast.LENGTH_SHORT).show()
+        startActivity(Intent(this,DataBindingActivity::class.java))
     }
 
 }
