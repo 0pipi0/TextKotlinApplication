@@ -42,6 +42,15 @@
             android:onClick="dataBinding"
             android:text="@string/data_binding" />
 
+        <Button
+            android:id="@+id/live_data"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/text_margin"
+            android:gravity="center"
+            android:onClick="liveData"
+            android:text="@string/live_data" />
+
 
 
     </androidx.appcompat.widget.LinearLayoutCompat>

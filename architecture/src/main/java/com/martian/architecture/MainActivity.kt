@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.snackbar.Snackbar
 import com.martian.architecture.databinding.ActivityMainBinding
 import com.martian.architecture.databinding.DataBindingActivity
+import com.martian.architecture.livedata.LiveDataActivity
 import com.martian.architecture.viewmodel.ViewModelActivity
 import com.martian.architecture.viewmodel.ViewModelFragmentActivity
 
@@ -48,5 +49,11 @@ class MainActivity : AppCompatActivity() {
 //        Toast.makeText(this,"data binding",Toast.LENGTH_SHORT).show()
         startActivity(Intent(this,DataBindingActivity::class.java))
     }
+    fun liveData(view: View) {
+//        Toast.makeText(this,"data binding",Toast.LENGTH_SHORT).show()
+        startActivity(Intent(this, LiveDataActivity::class.java))
+    }
+
+
 
 }

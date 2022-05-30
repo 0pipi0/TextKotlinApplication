@@ -94,6 +94,7 @@
     <string name="view_model_activity">View_Model (Activity)</string>
     <string name="view_model_fargment">View_Model (Fragment)</string>
     <string name="data_binding">Data_Binding</string>
+    <string name="live_data">Live_Data</string>
     <string name="title_activity_view_model">ViewModelActivity</string>
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>

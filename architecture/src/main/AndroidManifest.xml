@@ -32,6 +32,9 @@
         <activity
             android:name=".databinding.DataBindingActivity"
             android:exported="false" />
+        <activity
+            android:name=".livedata.LiveDataActivity"
+            android:exported="false" />
     </application>
 
 </manifest>
