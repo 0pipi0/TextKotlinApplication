@@ -21,17 +21,17 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".viewmodel.ViewModelActivity"
             android:exported="false"
             android:label="@string/title_activity_view_model"
             android:theme="@style/Theme.TextKotlinApplication.NoActionBar" />
-
+        <activity
+            android:name=".viewmodel.ViewModelFragmentActivity"
+            android:exported="false" />
         <activity
             android:name=".databinding.DataBindingActivity"
             android:exported="false" />
-
     </application>
 
 </manifest>

@@ -8,10 +8,12 @@ import com.google.android.material.snackbar.Snackbar
 import com.martian.architecture.databinding.ActivityMainBinding
 import com.martian.architecture.databinding.DataBindingActivity
 import com.martian.architecture.viewmodel.ViewModelActivity
+import com.martian.architecture.viewmodel.ViewModelFragmentActivity
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
+//    private lateinit var bindingContentScrolling: ContentScrollingBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -29,11 +31,17 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun initListener() {
+//        bindingContentScrolling = ContentScrollingBinding.inflate(layoutInflater)
+//        bindingContentScrolling.dataBinding
     }
 
-    fun viewModel(view: View){
+    fun viewModelActivity(view: View){
 //        Toast.makeText(this,"view model",Toast.LENGTH_SHORT).show()
         startActivity(Intent(this,ViewModelActivity::class.java))
+    }
+    fun viewModelFragment(view: View){
+//        Toast.makeText(this,"view model",Toast.LENGTH_SHORT).show()
+        startActivity(Intent(this,ViewModelFragmentActivity::class.java))
     }
 
     fun dataBinding(view: View) {

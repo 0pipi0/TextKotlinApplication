@@ -16,13 +16,22 @@
         android:orientation="vertical">
 
         <Button
-            android:id="@+id/view_model"
+            android:id="@+id/view_model_activity"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="@dimen/text_margin"
             android:gravity="center"
-            android:onClick="viewModel"
-            android:text="@string/view_model" />
+            android:onClick="viewModelActivity"
+            android:text="@string/view_model_activity" />
+
+        <Button
+            android:id="@+id/view_model_fragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/text_margin"
+            android:gravity="center"
+            android:onClick="viewModelFragment"
+            android:text="@string/view_model_fargment" />
 
         <Button
             android:id="@+id/data_binding"
