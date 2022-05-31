@@ -7,6 +7,9 @@ import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.snackbar.Snackbar
 import com.martian.architecture.databinding.ActivityMainBinding
 import com.martian.architecture.databinding.DataBindingActivity
+import com.martian.architecture.lifecycles.LifecycleOwnerActivity
+import com.martian.architecture.lifecycles.LifecyclesActivity
+import com.martian.architecture.lifecycles.MLifecycleService
 import com.martian.architecture.livedata.LiveDataActivity
 import com.martian.architecture.viewmodel.ViewModelActivity
 import com.martian.architecture.viewmodel.ViewModelFragmentActivity
@@ -53,7 +56,12 @@ class MainActivity : AppCompatActivity() {
 //        Toast.makeText(this,"data binding",Toast.LENGTH_SHORT).show()
         startActivity(Intent(this, LiveDataActivity::class.java))
     }
-
+    fun lifeCycles(view: View) {
+//        Toast.makeText(this,"data binding",Toast.LENGTH_SHORT).show()
+//        startActivity(Intent(this, LifecyclesActivity::class.java))
+//        startActivity(Intent(this, LifecycleOwnerActivity::class.java))
+        startService(Intent(this, MLifecycleService::class.java))
+    }
 
 
 }

@@ -9,6 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.TextKotlinApplication">
+        <service
+            android:name=".LifecycleService"
+            android:enabled="true"
+            android:exported="true"></service>
 
         <activity
             android:name=".MainActivity"
@@ -35,6 +39,14 @@
         <activity
             android:name=".livedata.LiveDataActivity"
             android:exported="false" />
+        <activity
+            android:name=".lifecycles.LifecyclesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".lifecycles.LifecycleOwnerActivity"
+            android:exported="false" />
+
+        <service android:name=".lifecycles.MLifecycleService"/>
     </application>
 
 </manifest>

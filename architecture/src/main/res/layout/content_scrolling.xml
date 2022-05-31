@@ -51,6 +51,14 @@
             android:onClick="liveData"
             android:text="@string/live_data" />
 
+        <Button
+            android:id="@+id/life_cycles"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/text_margin"
+            android:gravity="center"
+            android:onClick="lifeCycles"
+            android:text="@string/life_cycles" />
 
 
     </androidx.appcompat.widget.LinearLayoutCompat>
