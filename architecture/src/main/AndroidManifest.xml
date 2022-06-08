@@ -9,10 +9,6 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.TextKotlinApplication">
-        <service
-            android:name=".LifecycleService"
-            android:enabled="true"
-            android:exported="true"></service>
 
         <activity
             android:name=".MainActivity"
@@ -45,8 +41,56 @@
         <activity
             android:name=".lifecycles.LifecycleOwnerActivity"
             android:exported="false" />
+        <activity
+            android:name=".navigation.NavigationActivity"
+            android:exported="false"
+            android:label="@string/title_activity_navigation" />
+        <activity
+            android:name=".navigation.ui.setting.SettingsActivity"
+            android:exported="false"
+            android:label="@string/title_activity_settings" />
+        <activity
+            android:name=".navigation.ui.directions.DirectionActivity"
+            android:exported="true"
+            android:label="@string/title_activity_direction"
+            android:theme="@style/Theme.TextKotlinApplication.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
 
-        <service android:name=".lifecycles.MLifecycleService"/>
+                <data
+                    android:host="app.martian.com"
+                    android:scheme="http" />
+
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".navigation.ui.directions.DirectionDynamicActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <data
+                    android:host="app.martian.com"
+                    android:path="/userInfo"
+                    android:scheme="http" />
+
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".navigation.ui.menu.DrawerActivity"
+            android:exported="false"
+            android:label="@string/title_activity_drawer"
+            android:theme="@style/Theme.TextKotlinApplication.NoActionBar" />
+
+        <activity
+            android:name=".navigation.ui.dsl.DSLActivity"
+            android:exported="false" />
+
+        <service android:name=".lifecycles.MLifecycleService" />
     </application>
 
 </manifest>

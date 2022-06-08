@@ -60,6 +60,14 @@
             android:onClick="lifeCycles"
             android:text="@string/life_cycles" />
 
+        <Button
+            android:id="@+id/navigation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/text_margin"
+            android:gravity="center"
+            android:onClick="navigation"
+            android:text="@string/navigation" />
 
     </androidx.appcompat.widget.LinearLayoutCompat>
 

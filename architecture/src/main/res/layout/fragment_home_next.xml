@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <import type="com.martian.architecture.navigation.data.Person"/>
+        <variable
+            name="hViewModel"
+            type="com.martian.architecture.navigation.ui.homenext.HomeNextViewModel" />
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".navigation.ui.homenext.HomeNextFragment">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="20dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="show person info"
+                android:transitionName="text_home"
+                android:textSize="20sp"
+                />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@{@string/person_id(hViewModel.pserson.id)}"
+                android:textSize="20sp"
+                android:layout_marginTop="20dp"
+                tools:text="id"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@{@string/person_name(hViewModel.pserson.name)}"
+                android:textSize="20sp"
+                android:layout_marginTop="20dp"
+                tools:text="name"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@{@string/person_age(hViewModel.pserson.age)}"
+                android:textSize="20sp"
+                android:layout_marginTop="20dp"
+                tools:text="age"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@{@string/person_from(hViewModel.pserson.from)}"
+                android:textSize="20sp"
+                android:layout_marginTop="20dp"
+                tools:text="from"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </FrameLayout>
+</layout>

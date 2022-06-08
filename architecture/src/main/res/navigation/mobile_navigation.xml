@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.martian.architecture.navigation.ui.home.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_navigation_home_to_homeNextFragment"
+            app:destination="@+id/homeNextFragment"
+            >
+            <argument
+                android:name="person"
+                android:defaultValue="@null"
+                app:argType="com.martian.architecture.navigation.data.Person"
+                app:nullable="true" />
+            <argument
+                android:name="type"
+                android:defaultValue="0"
+                app:argType="integer" />
+            <!--                    <argument-->
+            <!--                        android:name="id"-->
+            <!--                        app:argType="string" />-->
+            <!--                    <argument-->
+            <!--                        android:name="name"-->
+            <!--                        app:argType="string" />-->
+            <!--                    <argument-->
+            <!--                        android:name="age"-->
+            <!--                        app:argType="integer" />-->
+        </action>
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_dashboard"
+        android:name="com.martian.architecture.navigation.ui.dashboard.DashboardFragment"
+        android:label="@string/title_dashboard"
+        tools:layout="@layout/fragment_dashboard">
+        <action
+            android:id="@+id/action_navigation_dashboard_to_mDialogFragment"
+            app:destination="@+id/mDialogFragment"
+            app:popUpTo="@+id/navigation_dashboard"
+            app:popUpToInclusive="false">
+            <argument
+                android:name="name"
+                app:argType="string" />
+        </action>
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_notifications"
+        android:name="com.martian.architecture.navigation.ui.notifications.NotificationsFragment"
+        android:label="@string/title_notifications"
+        tools:layout="@layout/fragment_notifications">
+        <action
+            android:id="@+id/action_navigation_notifications_to_settingsActivity"
+            app:destination="@+id/settingsActivity"
+            app:popUpTo="@+id/navigation_notifications"
+            app:popUpToInclusive="false"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left">
+        </action>
+
+        <action
+            android:id="@+id/action_navigation_notifications_to_drawerActivity"
+            app:destination="@+id/drawerActivity"
+            app:popUpTo="@+id/navigation_notifications"
+            app:popUpToInclusive="false">
+        </action>
+
+        <action
+            android:id="@+id/action_navigation_notifications_to_dSLActivity"
+            app:destination="@+id/DSLActivity"
+            app:popUpTo="@+id/navigation_notifications"
+            app:popUpToInclusive="false">
+        </action>
+
+
+
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/homeNextFragment"
+        android:name="com.martian.architecture.navigation.ui.homenext.HomeNextFragment"
+        android:label="fragment_home_next"
+        tools:layout="@layout/fragment_home_next">
+        <argument
+            android:name="person"
+            android:defaultValue="@null"
+            app:argType="com.martian.architecture.navigation.data.Person"
+            app:nullable="true" />
+        <argument
+            android:name="type"
+            android:defaultValue="0"
+            app:argType="integer" />
+    </fragment>
+
+    <dialog
+        android:id="@+id/mDialogFragment"
+        android:name="com.martian.architecture.navigation.ui.dialog.MDialogFragment"
+        android:label="fragment_m_dialog"
+        tools:layout="@layout/fragment_m_dialog">
+        <argument
+            android:name="name"
+            app:argType="string" />
+
+    </dialog>
+    <activity
+        android:id="@+id/settingsActivity"
+        android:name="com.martian.architecture.navigation.ui.setting.SettingsActivity"
+        android:label="SettingsActivity" />
+
+    <activity
+        android:id="@+id/directionActivity"
+        android:name="com.martian.architecture.navigation.ui.directions.DirectionActivity"
+        android:label="app_bar_direction"
+        app:action="android.intent.action.VIEW"
+        app:data="http://app.martian.com"
+        app:targetPackage="${applicationId}"
+        tools:layout="@layout/app_bar_direction" />
+
+    <activity
+        android:id="@+id/directionDynamicActivity"
+        android:name="com.martian.architecture.navigation.ui.directions.DirectionDynamicActivity"
+        app:dataPattern="http://app.martian.com/userInfo?userName={userName}&amp;userAge={userAge}"
+        app:targetPackage="${applicationId}"
+        android:label="activity_direction_dynamic"
+        tools:layout="@layout/activity_direction_dynamic" >
+        <argument
+            android:name="userName"
+            app:argType="string"/>
+        <argument
+            android:name="userAge"
+            app:argType="string"/>
+    </activity>
+    <activity
+        android:id="@+id/drawerActivity"
+        android:name="com.martian.architecture.navigation.ui.menu.DrawerActivity"
+        android:label="app_bar_drawer"
+        tools:layout="@layout/app_bar_drawer" />
+    <activity
+        android:id="@+id/DSLActivity"
+        android:name="com.martian.architecture.navigation.ui.dsl.DSLActivity"
+        android:label="activity_dsl"
+        tools:layout="@layout/activity_dsl" />
+</navigation>
