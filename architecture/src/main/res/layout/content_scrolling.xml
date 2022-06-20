@@ -69,6 +69,24 @@
             android:onClick="navigation"
             android:text="@string/navigation" />
 
+        <Button
+            android:id="@+id/paging"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/text_margin"
+            android:gravity="center"
+            android:onClick="paging"
+            android:text="@string/paging" />
+
+        <Button
+            android:id="@+id/room"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/text_margin"
+            android:gravity="center"
+            android:onClick="room"
+            android:text="@string/room" />
+
     </androidx.appcompat.widget.LinearLayoutCompat>
 
 

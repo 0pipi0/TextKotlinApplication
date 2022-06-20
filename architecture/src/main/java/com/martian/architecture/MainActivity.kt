@@ -4,15 +4,14 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
-import androidx.navigation.ui.navigateUp
 import com.google.android.material.snackbar.Snackbar
 import com.martian.architecture.databinding.ActivityMainBinding
 import com.martian.architecture.databinding.DataBindingActivity
-import com.martian.architecture.lifecycles.LifecycleOwnerActivity
 import com.martian.architecture.lifecycles.LifecyclesActivity
-import com.martian.architecture.lifecycles.MLifecycleService
 import com.martian.architecture.livedata.LiveDataActivity
 import com.martian.architecture.navigation.NavigationActivity
+import com.martian.architecture.paging.PagingActivity
+import com.martian.architecture.room.RoomActivity
 import com.martian.architecture.viewmodel.ViewModelActivity
 import com.martian.architecture.viewmodel.ViewModelFragmentActivity
 
@@ -68,5 +67,16 @@ class MainActivity : AppCompatActivity() {
 //        Toast.makeText(this,"data binding",Toast.LENGTH_SHORT).show()
         startActivity(Intent(this, NavigationActivity::class.java))
     }
+    fun paging(view: View) {
+//        Toast.makeText(this,"data binding",Toast.LENGTH_SHORT).show()
+        startActivity(Intent(this, PagingActivity::class.java))
+    }
+
+    fun room(view: View) {
+//        Toast.makeText(this,"data binding",Toast.LENGTH_SHORT).show()
+        startActivity(Intent(this, RoomActivity::class.java))
+    }
+
+
 
 }

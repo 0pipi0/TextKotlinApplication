@@ -85,11 +85,15 @@
             android:exported="false"
             android:label="@string/title_activity_drawer"
             android:theme="@style/Theme.TextKotlinApplication.NoActionBar" />
-
         <activity
             android:name=".navigation.ui.dsl.DSLActivity"
             android:exported="false" />
-
+        <activity
+            android:name=".paging.PagingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".room.RoomActivity"
+            android:exported="false" />
         <service android:name=".lifecycles.MLifecycleService" />
     </application>
 
