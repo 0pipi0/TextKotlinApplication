@@ -99,6 +99,7 @@
     <string name="navigation">Navigation</string>
     <string name="paging">Paging</string>
     <string name="room">Room</string>
+    <string name="workmanager">WorkManager</string>
     <string name="title_activity_view_model">ViewModelActivity</string>
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>

@@ -87,6 +87,15 @@
             android:onClick="room"
             android:text="@string/room" />
 
+        <Button
+            android:id="@+id/workManager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/text_margin"
+            android:gravity="center"
+            android:onClick="workManager"
+            android:text="@string/workmanager" />
+
     </androidx.appcompat.widget.LinearLayoutCompat>
 
 

@@ -14,6 +14,7 @@ import com.martian.architecture.paging.PagingActivity
 import com.martian.architecture.room.RoomActivity
 import com.martian.architecture.viewmodel.ViewModelActivity
 import com.martian.architecture.viewmodel.ViewModelFragmentActivity
+import com.martian.architecture.workmanager.WorkManagerActivity
 
 class MainActivity : AppCompatActivity() {
 
@@ -77,6 +78,9 @@ class MainActivity : AppCompatActivity() {
         startActivity(Intent(this, RoomActivity::class.java))
     }
 
-
+    fun workManager(view: View) {
+//        Toast.makeText(this,"data binding",Toast.LENGTH_SHORT).show()
+        startActivity(Intent(this, WorkManagerActivity::class.java))
+    }
 
 }
